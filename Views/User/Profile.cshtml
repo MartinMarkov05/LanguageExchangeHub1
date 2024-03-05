@@ -1,0 +1,115 @@
+﻿@model LanguageExchangeHub1.Services.Models.Users.UserViewModel
+
+
+
+
+<div class="user-image-container">
+    <img id="selected-image" src="" alt="Selected Image">
+</div>
+
+<form id="userEditingInputs" asp-action="EditProfile" method="post">
+    <div class="edit-buttons">
+        <label for="image-input">Change photo:</label>
+        <input asp-for="ImageUrl" type="file" id="image-input" accept="image/*" onchange="previewImage()">
+    </div>
+
+    <div class="edit-buttons">
+        <label class="form-lable">New name</label>
+        <input asp-for="Username" type="text" class="form-controll" />
+    </div>
+
+    <div class="edit-buttons">
+        <label class="form-lable">New bio</label>
+        <input type="text" class="form-controll" />
+    </div>
+
+    <div class="edit-buttons" id="editButtons">
+        <button type="submit" onclick="enableEditing()">Save Changes</button>
+        <button onclick="cancelEditing()">Cancel</button>
+    </div>
+</form>
+
+
+<div class="user-info-container">
+    <p id="name" class="user-name">@Model.Username</p>
+</div>
+
+<div class="user-bio" id="bio">
+    <p> </p>
+</div>
+
+<div class="user-followersSection">
+
+    <div class="user-followingList">
+        <p>FOLLOWING</p>
+    </div>
+
+    <div class="user-followersList">
+        <p>FOLLOWERS</p>
+    </div>
+
+</div>
+
+<div class="badget-statistics">
+    <h2 id="statisticHeather">Your badgets</h2>
+</div>
+
+<button onclick="showEditOptions()" id="editProfile">Edit profile</button>
+
+
+
+
+<script>function showEditOptions() {
+    
+    var editButtons = document.getElementsByClassName('edit-buttons');
+    for (var i = 0; i < editButtons.length; i++) {
+        editButtons[i].style.display = 'block';
+    }
+    document.getElementById('name').style.display = 'none';
+    document.getElementById('bio').style.display = 'none';
+
+    }
+
+    function enableEditing() {
+        var editButtons = document.getElementsByClassName('edit-buttons');
+        for (var i = 0; i < editButtons.length; i++) {
+            editButtons[i].style.display = 'none';
+        }
+
+        document.getElementById('name').style.display = 'block';
+        document.getElementById('bio').style.display = 'block';
+        // Enable editing logic here
+
+        alert('Editing enabled!');
+    }
+
+    function cancelEditing() {
+        var editButtons = document.getElementsByClassName('edit-buttons');
+        for (var i = 0; i < editButtons.length; i++) {
+            editButtons[i].style.display = 'none';
+        }
+
+        document.getElementById('name').style.display = 'block';
+        document.getElementById('bio').style.display = 'block';
+    }
+
+
+
+function previewImage() {
+        const input = document.getElementById('image-input');
+        const container = document.getElementById('image-container');
+        const image = document.getElementById('selected-image');
+
+        const file = input.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                image.src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+
+        }
+    }</script>

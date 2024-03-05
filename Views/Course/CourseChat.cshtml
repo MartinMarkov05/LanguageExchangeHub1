@@ -1,0 +1,59 @@
+﻿
+@model LanguageExchangeHub1.Services.Models.Courses.CourseViewModel
+
+
+
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    
+
+       <h1>@Model.Name</h1> 
+    
+</nav>
+<div class="Chat">
+
+    
+</div>
+<div class="Chat-RightSide">
+    <nav class="nav-rightSide">
+
+        <button id="members" onclick="showMembers()">Members</button>
+        <button id="requests" onclick="showRequests()">Requests</button>
+
+    </nav>
+    <div class="membersList">
+        @{
+            foreach (var item in Model.Members)
+            {
+                <div class="member-card">@item.Username</div>
+            }
+        }
+    </div>
+
+    <div class="requestList">
+        @{
+            if (!(Model.Requests == null))
+            {
+                foreach (var item in Model.Requests)
+                {
+                    <div class="request-card">
+
+                        <div>@item.User.Username</div>
+                        <button asp-action="SetStatus">Accept</button>
+                        <button asp-action="SetStatus">Reject</button>
+
+
+                    </div>
+                    <div class="member-card">@item.User.Username</div>
+                }
+            }
+
+        }
+    </div>
+</div>
+
+
+<script>
+    function showMembers() {
+        document.getElementsByClassName('membersList').style.display = 'block';
+    }
+</script>

@@ -1,0 +1,82 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-LanguageExchangeHub1-494218ea-a4d3-4c50-97ec-6485aa92682d</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Data\Models\" />
+    <None Remove="Views\User\" />
+    <None Remove="Views\Identity\" />
+    <None Remove="Utilities\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Base\" />
+    <None Remove="Services\Contracts\" />
+    <None Remove="Services\Models\" />
+    <None Remove="Services\Models\Users\" />
+    <None Remove="Services\Models\Base\" />
+    <None Remove="Repository\" />
+    <None Remove="Views\Roles\" />
+    <None Remove="Services\Models\Courses\" />
+    <None Remove="Views\Course\" />
+    <None Remove="Services\Models\Roles\" />
+    <None Remove="Services\Models\CourseUser\" />
+    <None Remove="Services\Models\Index\" />
+    <None Remove="Utilities\RequestStatus\" />
+    <None Remove="Services\Models\Request\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.14" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.11" />
+    <PackageReference Include="Npgsql" Version="7.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Models\" />
+    <Folder Include="Views\User\" />
+    <Folder Include="Views\Identity\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Base\" />
+    <Folder Include="Services\Contracts\" />
+    <Folder Include="Services\Models\" />
+    <Folder Include="Services\Models\Users\" />
+    <Folder Include="Services\Models\Base\" />
+    <Folder Include="Repository\" />
+    <Folder Include="Views\Roles\" />
+    <Folder Include="Services\Models\Courses\" />
+    <Folder Include="Views\Course\" />
+    <Folder Include="Services\Models\Roles\" />
+    <Folder Include="Services\Models\CourseUser\" />
+    <Folder Include="Services\Models\Index\" />
+    <Folder Include="Utilities\RequestStatus\" />
+    <Folder Include="Services\Models\Request\" />
+  </ItemGroup>
+</Project>

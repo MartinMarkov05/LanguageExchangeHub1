@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/LanguageExchangeHub1.props" />
+</Project>
