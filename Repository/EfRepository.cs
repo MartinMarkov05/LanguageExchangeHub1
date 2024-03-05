@@ -84,7 +84,9 @@ namespace LanguageExchangeHub1.Repository
             }
             catch (Exception e)
             {
+                
                 throw e;
+
             }
         }
 
