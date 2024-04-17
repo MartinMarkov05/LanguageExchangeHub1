@@ -1,0 +1,46 @@
+﻿@model Biz.Models.Models.Courses.CourseViewModel
+
+<link rel="stylesheet" href="~/css/Assignment.css" />
+<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" id="courseAssignmentsNav">
+
+    <h1>@Model.Name</h1>
+    <form a asp-action="CourseAssignments" asp-controller="Course">
+
+        <input type="submit" value="Assignments" />
+        <input type="hidden" name="courseId" value="@Model.Id" />
+    </form>
+
+</nav>
+
+<div class="scrolMenu">
+    <div class="assignmentCards">
+
+        @if (Model.Assignments != null)
+        {
+            @foreach (var assignment in Model.Assignments)
+            {
+                <div class="assignmentCard">
+                    <h3> @assignment.Name</h3>
+                    <h5>Start time: @assignment.StartTime</h5>
+                    <h5>End time:@assignment.EndTime </h5>
+
+                    <form asp-action="AssignmentPage" asp-controller="Assignment">
+                        <input type="hidden" name="assignmentId" value="@assignment.Id" />
+                        <button type="submit">View</button>
+                    </form>
+
+                </div>
+            }
+        }
+    </div>
+
+
+
+</div>
+
+@if (Model.UserId == ViewBag.UserId)
+{
+
+    <a href="@Url.Action("Assignment", "Assignment", new { courseId = Model.Id })" class="btn btn-primary">Create Assignment</a>
+}
+

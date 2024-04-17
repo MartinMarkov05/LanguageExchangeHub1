@@ -1,0 +1,59 @@
+﻿@model Biz.Models.Models.Courses.CourseViewModel
+
+<h1>Create Course</h1>
+
+<form asp-action="CreateCourse">
+
+    <div class="user-image-container">
+        <img id="selected-image" >
+    </div>
+
+    <div class="mb-3">
+        <label class="form-lable">Change photo:</label>
+        <input asp-for="ImageFile" type="file" id="image-input" onchange="previewImage()">
+        <input asp-for="Image" type="hidden" id="image-data" />
+     
+    </div>
+
+    <div class="mb-3">
+        <label class="form-lable">Name:</label>
+        <input asp-for="Name" type="text" class="form-controll" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-lable">Description:</label>
+        <input asp-for="Description" type="text" class="form-controll" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="LanguageId" class="form-lable">Language to learn:</label>
+        @Html.DropDownList("LanguageId", new SelectList(ViewBag.Languages, "Id", "Name"), new { @class = "form-control" })
+
+
+    </div>
+
+
+    <input type="submit" class="btn btn-primary" value="Save" >
+
+</form>
+<script>
+function previewImage() {
+        const input = document.getElementById('image-input');
+        const dataField = document.getElementById('image-data');
+        const image = document.getElementById('selected-image');
+
+        const file = input.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                image.src = e.target.result;
+                imageDataField.value = e.target.result.split(',')[1];
+            };
+
+            reader.readAsDataURL(file);
+
+        }
+    }</script>
+

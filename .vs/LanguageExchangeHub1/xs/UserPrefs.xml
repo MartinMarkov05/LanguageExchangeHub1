@@ -1,0 +1,174 @@
+﻿<Properties StartupConfiguration="{9EB50183-41AC-4F42-A889-B76E9E1CEA59}|https">
+  <MonoDevelop.Ide.ItemProperties.LanguageExchangeHub1 PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Biz.Models/Models/StudentWorkGrades.cs">
+    <Files>
+      <File FileName="appsettings.json" />
+      <File FileName="Program.cs" />
+      <File FileName="Views/Shared/_Layout.cshtml" />
+      <File FileName="wwwroot/css/site.css" />
+      <File FileName="Views/Shared/_Layout.cshtml.css" />
+      <File FileName="wwwroot/js/site.js" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Controllers/HomeController.cs" />
+      <File FileName="Views/_ViewImports.cshtml" />
+      <File FileName="Views/Shared/_LoginPartial.cshtml" />
+      <File FileName="Controllers/UserController.cs" />
+      <File FileName="Models/ErrorViewModel.cs" />
+      <File FileName="Views/Shared/_ValidationScriptsPartial.cshtml" />
+      <File FileName="Properties/launchSettings.json" />
+      <File FileName="Views/_ViewStart.cshtml" />
+      <File FileName="Views/Shared/Error.cshtml" />
+      <File FileName="Views/User/Profile.cshtml" />
+      <File FileName="Views/Identity/Login.cshtml" />
+      <File FileName="Views/Identity/CreateAccount.cshtml" />
+      <File FileName="Controllers/IdentityController.cs" />
+      <File FileName="Controllers/BaseController.cs" />
+      <File FileName="Controllers/RolesController.cs" />
+      <File FileName="Views/Roles/CreateRole.cshtml" />
+      <File FileName="Views/User/AddMember.cshtml" />
+      <File FileName="Controllers/CourseController.cs" />
+      <File FileName="Views/Course/CreateCourse.cshtml" />
+      <File FileName="Views/Course/AddMember.cshtml" />
+      <File FileName="Views/Course/CourseChat.cshtml" />
+      <File FileName="Views/Home/Privacy.cshtml" />
+      <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.311/Microsoft.Common.CurrentVersion.targets" />
+      <File FileName="../Entities/Contexts/ApplicationDbContext.cs" Line="29" Column="49" />
+      <File FileName="../Services/CourseService.cs" />
+      <File FileName="../Services/LanguageService.cs" />
+      <File FileName="../Services/RequestService.cs" />
+      <File FileName="../Services/RoleService.cs" />
+      <File FileName="../Services/UserService.cs" />
+      <File FileName="../Mappers/CourseMapper.cs" />
+      <File FileName="../Entities/Models/Role.cs" />
+      <File FileName="../Biz.Models/Models/Roles/RoleViewModel.cs" />
+      <File FileName="../Mappers/RoleMapper.cs" />
+      <File FileName="../Repositories/EfRepository.cs" />
+      <File FileName="../Entities/Models/Course.cs" />
+      <File FileName="../Entities/Models/Request.cs" />
+      <File FileName="../Entities/Models/Base/CourseBaseEntity.cs" />
+      <File FileName="../Entities/Models/CourseUser.cs" />
+      <File FileName="../Entities/Models/Language.cs" />
+      <File FileName="../Entities/Models/User.cs" />
+      <File FileName="../Biz.Models/Models/Courses/CourseViewModelForChat.cs" />
+      <File FileName="../Biz.Models/Models/Courses/CourseViewModel.cs" />
+      <File FileName="../Mappers/RequestMapper.cs" />
+      <File FileName="../Mappers/UserMapper.cs" />
+      <File FileName="../Services/Contracts/ICourseService.cs" />
+      <File FileName="../Services/Contracts/ILanguageService.cs" />
+      <File FileName="../Services/Contracts/IRequestService.cs" />
+      <File FileName="../Services/Contracts/IUserService.cs" />
+      <File FileName="../Biz.Models/Models/Request/RequestViewModel.cs" />
+      <File FileName="../Core/RequestStatus.cs" />
+      <File FileName="../Entities/Migrations/20240315152305_MessageTable.cs" />
+      <File FileName="../Entities/Models/Message.cs" />
+      <File FileName="../Services/Contracts/IMessageService.cs" />
+      <File FileName="../Services/Contracts/IRoleService.cs" />
+      <File FileName="../Services/MessageService.cs" />
+      <File FileName="../Biz.Models/Models/Message/MessageViewModel.cs" />
+      <File FileName="../Mappers/MessageMapper.cs" />
+      <File FileName="../Entities/Models/Assignment.cs" Line="1" Column="1" />
+      <File FileName="../Services/Base/UserData.cs" />
+      <File FileName="wwwroot/css/Chat.css" />
+      <File FileName="../Biz.Models/Models/Users/UserViewModel.cs" />
+      <File FileName="../Biz.Models/Models/Users/UserLoginModel.cs" />
+      <File FileName="../Entities/Migrations/20240319111337_FixImage.Designer.cs" />
+      <File FileName="../Entities/Migrations/20240319111337_FixImage.cs" />
+      <File FileName="../Entities/Migrations/20240319112046_FixImage2.cs" />
+      <File FileName="wwwroot/css/Profile.css" />
+      <File FileName="../Entities/Migrations/20240319123951_AddUserInfo.cs" />
+      <File FileName="Views/Course/CourseAssignments.cshtml" />
+      <File FileName="Controllers/AssignmentController.cs" />
+      <File FileName="../Services/Contracts/IAssignmentService.cs" Line="19" Column="64" />
+      <File FileName="../Services/AssignmentService.cs" Line="92" Column="49" />
+      <File FileName="../Biz.Models/Models/Assignments/AssignmentViewModel.cs" />
+      <File FileName="../Entities/Migrations/20240320143459_AddAssignmentTable.cs" />
+      <File FileName="../Entities/Migrations/20240320144138_StartDateInAssignmentFix.cs" />
+      <File FileName="../Entities/Migrations/20240320143459_AddAssignmentTable.Designer.cs" />
+      <File FileName="../Entities/Migrations/20240320144138_StartDateInAssignmentFix.Designer.cs" />
+      <File FileName="../Services/Base/BaseService.cs" />
+      <File FileName="../Entities/Models/StudentWork.cs" Line="7" Column="1" />
+      <File FileName="../Biz.Models/Models/Users/UserViewModelForChat.cs" />
+      <File FileName="Views/Assignment/Assignment.cshtml" />
+      <File FileName="../Entities/Migrations/20240320165525_FixAssignmentAndAddStudentWorkTable.cs" />
+      <File FileName="../Mappers/AssignmentMapper.cs" Line="58" Column="39" />
+      <File FileName="Views/User/UserAssignments.cshtml" />
+      <File FileName="Views/Assignment/AssignmentPage.cshtml" />
+      <File FileName="../Services/Base/IServicesResourceProvider.cs" />
+      <File FileName="../Services/Base/IUserData.cs" />
+      <File FileName="../Services/Base/SingleServiceResourceProvider.cs" />
+      <File FileName="wwwroot/css/Assignment.css" />
+      <File FileName="../Entities/Migrations/20240326110427_AddFileNameColumnInAssignmentAndStudentWork.Designer.cs" />
+      <File FileName="../Entities/Migrations/20240326120020_AddFileNameToUser.cs" />
+      <File FileName="ImageHelper.cs" />
+      <File FileName="../Repositories/IEfRepository{T}.cs" />
+      <File FileName="../Repositories/IEfRepository.cs" />
+      <File FileName="../Biz.Models/Models/Users/UserRegistrationModel.cs" />
+      <File FileName="../Biz.Models/Models/Index/IndexViewModel.cs" />
+      <File FileName="../Biz.Models/Models/StudentWork/StudentWorkViewModel.cs" />
+      <File FileName="../Entities/Migrations/20240408150738_AddIsFileAttachedInStudentWork.cs" Line="1" Column="1" />
+      <File FileName="../Core/Grades.cs" />
+      <File FileName="../Entities/Models/StudentGrade.cs" Line="25" Column="36" />
+      <File FileName="../Entities/Migrations/20240410150355_StudentGrade.cs" Line="1" Column="1" />
+      <File FileName="../Biz.Models/Models/StudentWorkGrades.cs" Line="13" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LanguageExchangeHub1" expanded="True">
+            <Node name="Biz.Models" expanded="True">
+              <Node name="Models" expanded="True">
+                <Node name="Assignments" expanded="True" />
+                <Node name="Courses" expanded="True" />
+                <Node name="Index" expanded="True" />
+                <Node name="Message" expanded="True" />
+                <Node name="Request" expanded="True" />
+                <Node name="Roles" expanded="True" />
+                <Node name="StudentWork" expanded="True" />
+                <Node name="Users" expanded="True" />
+                <Node name="StudentWorkGrades.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Core" expanded="True" />
+            <Node name="Entities" expanded="True">
+              <Node name="Contexts" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Base" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="LanguageExchangeHub1" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Assignment" expanded="True" />
+                <Node name="Course" expanded="True" />
+                <Node name="Home" expanded="True" />
+                <Node name="Identity" expanded="True" />
+                <Node name="Roles" expanded="True" />
+                <Node name="Shared" expanded="True" />
+                <Node name="User" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="css" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="Mappers" expanded="True" />
+            <Node name="Repositories" expanded="True" />
+            <Node name="Services" expanded="True">
+              <Node name="Base" expanded="True" />
+              <Node name="Contracts" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/martinmarkov/Downloads/Test1/Test/Controllers/AssignmentController.cs" relfile="Controllers/AssignmentController.cs" line="49" column="1" />
+      <Breakpoint enabled="false" file="/Users/martinmarkov/Downloads/Test1/Test/ImageHelper.cs" relfile="ImageHelper.cs" line="21" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>

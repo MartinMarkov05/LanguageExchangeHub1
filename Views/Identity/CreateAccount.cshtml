@@ -1,0 +1,74 @@
+﻿@model Biz.Models.Models.Users.UserRegistrationModel
+
+@{
+    ViewData["Title"] = "CreateAccount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+}
+
+<head>
+    <link href="~/assets/styles/style-signup.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+</head>
+<body>
+    <main class="signup-form">
+        <div class="cotainer">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Registration form</div>
+                        <div class="card-body">
+                            <form asp-controller="Identity" asp-action="CreateAccount">
+                                <div class="form-group row">
+                                    <label class="col-md-4 col-form-label text-md-right">Username</label>
+                                    <div class="col-md-6">
+                                        <input asp-for="Username" type="text" class="form-control" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group row">
+                                    <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
+                                    <div class="col-md-6">
+                                        <input asp-for="Email" type="email" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+                                    <div class="col-md-6">
+                                        <input asp-for="Password" type="password" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="repeat-password" class="col-md-4 col-form-label text-md-right">Repeat pasword</label>
+                                    <div class="col-md-6">
+                                        <input asp-for="RepeatPassword" type="password" class="form-control" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label asp-for="Role" class="col-md-4 col-form-label text-md-right">Role</label>
+                                    <div class="col-md-6">
+                                        @Html.DropDownListFor(x => x.Role,
+                                         (List<SelectListItem>)ViewData["Roles"], null, new { @class = "form-control" , required = "required" })
+                                        <span asp-validation-for="Role"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        Sign up
+                                    </button>
+                                    <a href="@this.Url.Action("Login", "Identity")" class="btn btn-link">
+                                        Login
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>

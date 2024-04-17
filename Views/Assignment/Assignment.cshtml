@@ -1,0 +1,25 @@
+﻿@model Biz.Models.Models.Assignments.AssignmentViewModel
+
+<link rel="stylesheet" href="~/css/Assignment.css" />
+<h1>Create Assignment</h1>
+<form asp-action="CreateAssignment" enctype="multipart/form-data" name="courseId">
+    <div class="mb-3">
+        <label class="form-lable">Name:</label>
+        <input asp-for="Name" type="text" class="form-controll" />
+    </div>
+
+    <div class="mb-3">
+        <label class="form-lable">Description:</label>
+        <input asp-for="Description" type="text" id="descriptionInput" class="form-controll" />
+    </div>
+
+    <div>
+        <label>Start: </label>
+        <input asp-for="StartTime" type="datetime-local" />
+        <label>End: </label>
+        <input asp-for="EndTime" type="datetime-local" />
+    </div>
+
+   <input asp-for="CourseId" type="hidden"/>
+    <input type="submit" class="btn btn-primary" value="Save">
+</form>

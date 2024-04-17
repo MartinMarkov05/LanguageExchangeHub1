@@ -1,0 +1,143 @@
+﻿@model Biz.Models.Models.Index.IndexViewModel
+
+
+<html>
+<head>
+    <link rel="stylesheet" href="/wwwroot/css/site.css" />
+</head>
+<body>
+    <main>
+
+        <section>
+   <header><h1 class="coursesHeadings">Your courses</h1></header>
+            <div class="scrolMenu" >
+
+                @{
+
+                  
+                    if (Model.Courses!= null)
+                    {
+                     
+                        foreach (var item in Model.Courses)
+                        {
+                            <div class="course">
+                                <img />
+                                <h2>@item.Name</h2>
+
+                                @using (Html.BeginForm("CourseChat", "Course", FormMethod.Get, new { @class = "goToCourses" }))
+                                {
+                                    <button type="submit" value="@item.Id" name="courseId" placeholder="Go to course" class="goToCourses">Go to course</button>
+
+                                }
+                            </div>
+                            <br />
+                        }
+                    }
+                }
+            </div>
+        </section>
+
+        <br />
+
+        <section id="searchCourseSection">
+            <form method="get" asp-action="Index" asp-controller="Home">
+                <input id="searchbar" type="text" name="courseName" placeholder="Search course..." />
+              @Html.DropDownList("languageId", new SelectList(Model.Languages, "Id", "Name"), "Select Language", new { @class = "form-control" }) 
+              
+ <button type="submit" onclick="showResults()">Search</button>
+
+            </form>
+            <div class="scrolMenu" id="searchScrolMenu">
+                <div class="courseCards">
+
+                    @{if (Model.FilteredCourses != null)
+                        {
+                            foreach (var course in Model.FilteredCourses)
+                            {
+                                <div class="courseCard">
+                                    <div class="header">@course.Name</div>
+                                    <div class="CourseLanguage">
+                                        @foreach (var language in Model.Languages)
+                                        {
+                                            if (language.Id == course.LanguageId)
+                                            {
+                                                <div>@language.Name</div>
+                                            }
+                                        }
+                                    </div>
+                                    <button type="submit" onclick="showCoursePreview('@course.Name',' @course.Description', '@course.ImageFile',' @course.Id') ">View</button>
+                                </div>
+                            }
+                        }
+                    }
+                </div>
+            </div>
+
+            <div class="coursePreview" id="preview">
+                    <div id="previewImage">
+                        <img id="img" src="" alt="Course Image">
+                    </div>
+                    <div id="previewName"></div>
+                    <div id="previewDescription"></div>
+                    
+                @using (Html.BeginForm("Request", "Course", FormMethod.Post ))
+                {
+                    <input hidden type="text" id="previewId"  name="courseId" />
+                    <button type="submit" placeholder="Request To Join" class="RequestToJoin">Request to join</button>
+                }
+                <button type="button" onclick="closePreview()">&times;</button>
+            </div>
+
+
+        </section>
+        @if (User.IsInRole("Admin") || User.IsInRole("Teacher"))
+        {
+            <a href="@Url.Action("CreateCourse", "Course")" class="btn btn-primary">Create Course</a>
+        }
+
+
+    </main>
+</body>
+
+</html>
+
+<script>function showResults() {
+        document.getElementsByClassName('scrolMenu').style.display = 'block';
+
+    }
+    var preview = document.getElementById('preview');
+
+    function showCoursePreview(courseName, courseDescription, imageFile, courseId) {
+        var courseNameElement = document.getElementById('previewName');
+        var courseDescriptionElement = document.getElementById('previewDescription');
+        var courseImageElement = document.getElementById('previewImage');
+        var courseIdElement = document.getElementById('previewId');
+        courseNameElement.innerHTML = courseName;
+        courseDescriptionElement.innerHTML = courseDescription;
+        courseIdElement.value = courseId;
+        courseImageElement.querySelector('#img').src = imageFile;
+
+        preview.classList.remove('close-preview');
+        preview.classList.add('show-preview');
+
+    }
+    window.addEventListener('click', function (event) {
+        var searchScrolMenu = document.getElementById('searchScrolMenu');
+        if (searchScrolMenu && !searchScrolMenu.contains(event.target)) {
+            searchScrolMenu.style.display = 'none'; // Hide popup when user clicks outside of it
+        }
+    });
+
+    function closePreview() {
+        var preview = document.getElementById('preview');
+
+        preview.classList.add('close-preview');
+    }</script>
+
+<!-- Bootstrap JavaScript and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@2.11.6/dist/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+

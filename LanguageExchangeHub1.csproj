@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-LanguageExchangeHub1-494218ea-a4d3-4c50-97ec-6485aa92682d</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.16" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.16">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	</PackageReference>
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="7.0.16" />
+	<PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="7.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Http" Version="7.0.0" />
+	<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.16" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Biz.Models\Biz.Models.csproj" />
+    <ProjectReference Include="..\Entities\Entities.csproj" />
+    <ProjectReference Include="..\Services\Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="database.db" />
+    <None Remove="Views\Assignment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Assignment\" />
+  </ItemGroup>
+</Project>

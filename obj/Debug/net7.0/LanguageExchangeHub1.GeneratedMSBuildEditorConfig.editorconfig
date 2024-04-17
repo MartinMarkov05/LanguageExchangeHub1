@@ -1,0 +1,97 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LanguageExchangeHub1
+build_property.RootNamespace = LanguageExchangeHub1
+build_property.ProjectDir = /Users/martinmarkov/Downloads/Test1/Test/
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /Users/martinmarkov/Downloads/Test1/Test
+build_property._RazorSourceGeneratorDebug = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Assignment/Assignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudC9Bc3NpZ25tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Assignment/AssignmentPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXNzaWdubWVudC9Bc3NpZ25tZW50UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Course/AddMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlL0FkZE1lbWJlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Course/CourseAssignments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlL0NvdXJzZUFzc2lnbm1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Course/CourseChat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlL0NvdXJzZUNoYXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Course/CreateCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ291cnNlL0NyZWF0ZUNvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Identity/CreateAccount.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHkvQ3JlYXRlQWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Identity/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSWRlbnRpdHkvTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Roles/CreateRole.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUm9sZXMvQ3JlYXRlUm9sZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/User/AddMember.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9BZGRNZW1iZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/User/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Qcm9maWxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/User/UserAssignments.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlci9Vc2VyQXNzaWdubWVudHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/martinmarkov/Downloads/Test1/Test/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-dyoih7u2ij

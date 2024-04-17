@@ -1,0 +1,198 @@
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.csproj.AssemblyReference.cache
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.GeneratedMSBuildEditorConfig.editorconfig
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.AssemblyInfoInputs.cache
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.AssemblyInfo.cs
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.csproj.CoreCompileInputs.cache
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.MvcApplicationPartsAssemblyInfo.cs
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.MvcApplicationPartsAssemblyInfo.cache
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.RazorAssemblyInfo.cache
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.RazorAssemblyInfo.cs
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/appsettings.Development.json
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/appsettings.json
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.staticwebassets.runtime.json
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.exe
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.deps.json
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.runtimeconfig.json
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.pdb
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Azure.Core.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Azure.Identity.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Castle.Core.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Humanizer.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Bcl.AsyncInterfaces.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Data.SqlClient.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Proxies.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Identity.Client.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Identity.Client.Extensions.Msal.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.IdentityModel.Abstractions.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.IdentityModel.Logging.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.IdentityModel.Tokens.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.OpenApi.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.SqlServer.Server.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Microsoft.Win32.SystemEvents.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Mono.TextTemplating.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Newtonsoft.Json.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.CodeDom.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.Configuration.ConfigurationManager.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.Drawing.Common.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.IdentityModel.Tokens.Jwt.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.Memory.Data.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.Runtime.Caching.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.Security.Cryptography.ProtectedData.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.Security.Permissions.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/System.Windows.Extensions.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/unix/lib/net6.0/Microsoft.Data.SqlClient.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Data.SqlClient.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/unix/lib/net6.0/System.Drawing.Common.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Drawing.Common.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Runtime.Caching.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Biz.Models.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Core.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Entities.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Mappers.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Repositories.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Services.dll
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Biz.Models.pdb
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Entities.pdb
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Services.pdb
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Core.pdb
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Mappers.pdb
+D:/PMG/12_class/12 class/Test1/Test/bin/Debug/net7.0/Repositories.pdb
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/staticwebassets.build.json
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/staticwebassets.development.json
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.LanguageExchangeHub1.Microsoft.AspNetCore.StaticWebAssets.props
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.build.LanguageExchangeHub1.props
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.LanguageExchangeHub1.props
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.LanguageExchangeHub1.props
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/staticwebassets.pack.json
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/scopedcss/bundle/LanguageExchangeHub1.styles.css
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/scopedcss/projectbundle/LanguageExchangeHub1.bundle.scp.css
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/Language.4A409426.Up2Date
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.dll
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/refint/LanguageExchangeHub1.dll
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.pdb
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.genruntimeconfig.cache
+D:/PMG/12_class/12 class/Test1/Test/obj/Debug/net7.0/ref/LanguageExchangeHub1.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/appsettings.Development.json
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/appsettings.json
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.staticwebassets.runtime.json
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/database.db
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.deps.json
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.runtimeconfig.json
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LanguageExchangeHub1.pdb
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Castle.Core.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Humanizer.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LinqKit.Core.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/LinqKit.Microsoft.EntityFrameworkCore.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.Internal.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.Data.Sqlite.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Proxies.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.EntityFrameworkCore.Sqlite.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.DependencyModel.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.Identity.Core.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.Identity.Stores.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Microsoft.OpenApi.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Mono.TextTemplating.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Newtonsoft.Json.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/SQLitePCLRaw.batteries_v2.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/SQLitePCLRaw.core.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/SQLitePCLRaw.provider.e_sqlite3.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/System.CodeDom.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/alpine-arm/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/alpine-arm64/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/alpine-x64/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/browser-wasm/nativeassets/net7.0/e_sqlite3.a
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-arm/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-arm64/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-armel/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-mips64/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-musl-arm/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-musl-arm64/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-musl-x64/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-ppc64le/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-s390x/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-x64/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/linux-x86/native/libe_sqlite3.so
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/maccatalyst-arm64/native/libe_sqlite3.dylib
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/maccatalyst-x64/native/libe_sqlite3.dylib
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/osx-arm64/native/libe_sqlite3.dylib
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/osx-x64/native/libe_sqlite3.dylib
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/win-arm/native/e_sqlite3.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/win-arm64/native/e_sqlite3.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/win-x64/native/e_sqlite3.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/runtimes/win-x86/native/e_sqlite3.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Biz.Models.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Core.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Entities.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Mappers.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Repositories.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Services.dll
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Biz.Models.pdb
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Entities.pdb
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Services.pdb
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Core.pdb
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Mappers.pdb
+/Users/martinmarkov/Downloads/Test1/Test/bin/Debug/net7.0/Repositories.pdb
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.csproj.AssemblyReference.cache
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.AssemblyInfoInputs.cache
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.AssemblyInfo.cs
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.csproj.CoreCompileInputs.cache
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.MvcApplicationPartsAssemblyInfo.cs
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.MvcApplicationPartsAssemblyInfo.cache
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.RazorAssemblyInfo.cache
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.RazorAssemblyInfo.cs
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.LanguageExchangeHub1.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.build.LanguageExchangeHub1.props
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.LanguageExchangeHub1.props
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.LanguageExchangeHub1.props
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/staticwebassets.pack.json
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/staticwebassets.build.json
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/staticwebassets.development.json
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/scopedcss/bundle/LanguageExchangeHub1.styles.css
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/scopedcss/projectbundle/LanguageExchangeHub1.bundle.scp.css
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.csproj.CopyComplete
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.dll
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/refint/LanguageExchangeHub1.dll
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.pdb
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/LanguageExchangeHub1.genruntimeconfig.cache
+/Users/martinmarkov/Downloads/Test1/Test/obj/Debug/net7.0/ref/LanguageExchangeHub1.dll

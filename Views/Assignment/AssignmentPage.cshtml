@@ -1,0 +1,146 @@
+﻿@using Core;
+@model Biz.Models.Models.Assignments.AssignmentViewModel
+
+<link rel="stylesheet" href="~/css/Assignment.css" />
+
+
+<h1>@Model.Name</h1>
+<h5>Start time:@Model.StartTime</h5>
+<h5>End time:@Model.EndTime</h5>
+
+
+<div class="AssignmentInstructionBlock">
+    <div>
+        <p>Instructions:</p>
+        @Model.Description
+    </div>
+
+    <p>Materials:</p>
+    @if (Model.MaterialPreview != null)
+    {
+        <div>
+            @Html.ActionLink(Model.FileName, "DownloadFiles", "Assignment", new { assignmentId = Model.Id }, null);
+
+        </div>
+    }
+    else
+    {
+        <p>None</p>
+    }
+
+    @{
+        var loggedUser = ViewBag.loggedUser.Result;
+    }
+
+    @if (Model.UserId == loggedUser.Id)
+    {
+        <p>Add materials:</p>
+        <form enctype="multipart/form-data" method="post" asp-action="AttachMaterials" asp-controller="Assignment">
+
+            <div class="browse-button">
+                <input class="browse-input" id="fileInput" value="@Model.MaterialPreview" type="file" name="file" onchange="fileCheck1(this);" />
+                <input type="hidden" value="@Model.Id" name="assignmentId" />
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-primary btn-block" type="submit" id="attachButton" value="Submit" />
+            </div>
+        </form>
+    }
+</div>
+
+<br />
+
+@if (Model.UserId == loggedUser.Id)
+    {
+    <div class="studentHomework">
+        <p>Students work:</p>
+        @Html.ActionLink(Model.StudentWorkPreview.FileName, "DownloadStudentWorkFiles", "Assignment", new { assignmentId = Model.Id }, null);
+    </div>
+
+
+    <form asp-controller="Assignment" asp-action="SaveGrades" method="post">
+        <h5 id="GradeTableHeader">Rate your students</h5>
+        <table class="table table-bordered table-responsive table-hover" id="GradeTable">
+            <tr>
+                <th>Username</th>
+                <th>Grade</th>
+            </tr>
+            @for (int i = 0; i < Model.StudentWorkGrades.Count; i++)
+            {
+                <tr>
+                    <td>@Model.StudentWorkGrades[i].Username</td>
+                    <td>
+                        <select asp-for="StudentWorkGrades[i].Grade" asp-items="@Html.GetEnumSelectList<Grades>()">
+                           
+                        </select>
+                        <input asp-for="StudentWorkGrades[i].Id" type="hidden" />
+                        <input asp-for="StudentWorkGrades[i].AssignmentId" type="hidden" />
+                        <input asp-for="StudentWorkGrades[i].UserId" type="hidden" />
+                    </td>
+                </tr>
+            }
+        </table>
+        <div class="form-group">
+            <input class="btn btn-primary btn-block" type="submit" id="SaveGradesButton" value="Save Grades" />
+        </div>
+    </form>
+    }
+
+
+
+@if (Model.UserId != loggedUser.Id)
+{
+    <div class="AttachStudentWorkField">
+        <p>My work:</p>
+        <div>
+            @if (Model.StudentsWork.Count != 0)
+            {
+                @Html.ActionLink(Model.StudentWorkPreview.FileName, "DownloadStudentWorkFiles", "Assignment", new { assignmentId = Model.Id }, null);
+            }
+        </div>
+
+
+        <form enctype="multipart/form-data" method="post" asp-action="AttachWork" asp-controller="Assignment">
+            <p>Add your work:</p>
+            <div class="browse-button">
+                <input class="browse-input" id="fileInput" value="@Model.StudentWorkPreview" type="file" name="file" onchange="fileCheck1(this)" />
+                <input type="hidden" value="@Model.Id" name="assignmentId" />
+            </div>
+
+            <div class="form-group">
+                <input class="btn btn-primary btn-block" id="attachButton" type="submit" value="Attach file" style="display: none" />
+            </div>
+        </form>
+
+
+    </div>
+    if (Model.IsHandInButtonVisible)
+    {
+        <form asp-action="HandInStudentWork" asp-controller="Assignment">
+            <input class="btn btn-primary btn-block" id="HandInButton" type="submit" value="Hand in" />
+            <input type="hidden" value="@Model.Id" name="assignmentId" />
+        </form>
+    }
+
+}
+
+
+    
+
+
+<script>function fileCheck1(input) {
+        var attachButton = document.getElementById('attachButton');
+        // If a file is selected
+        if (input.files && input.files[0]) {
+            attachButton.style.display = 'block'; // Show the "Attach file" button
+        } else {
+            attachButton.style.display = 'none'; // Hide the "Attach file" button
+        }
+    }
+
+    // Register the event listener outside of the function
+    document.getElementById('fileInput').addEventListener('change', function () {
+        fileCheck(this);
+    });
+    </script>

@@ -1,0 +1,66 @@
+﻿
+.assignmentCards {
+    display: grid;
+    gap: .9rem;
+}
+
+.assignmentCard {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 500px;
+}
+
+.AssignmentInstructionBlock {
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    width: 500px;
+}
+
+.studentHomework {
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    width: 500px;
+    top: 540px;
+}
+
+.AttachStudentWorkField {
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    width: 500px;
+    top: 412px;
+}
+
+#HandInButton {
+    position: absolute; 
+    top: 570px;
+}
+
+#courseAssignmentsNav {
+    right: 200px;
+    padding-left: 100px;
+}
+
+#descriptionInput{
+
+}
+
+#GradeTable {
+    position: absolute; 
+    width: 500px;
+    right: 200px;
+}
+
+#SaveGradesButton {
+    position: absolute;
+    right: 200px;
+    margin-top: 180px;
+}
+
+#GradeTableHeader {
+    position: absolute;
+    right: 400px;
+    margin-top: -40px;
+}

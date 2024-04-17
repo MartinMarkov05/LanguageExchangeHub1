@@ -1,0 +1,94 @@
+﻿@model Biz.Models.Models.Users.UserViewModel
+
+<link rel="stylesheet" href="~/css/Profile.css" type="text/css" />
+
+
+<form class="profileEditForm" method="post" enctype="multipart/form-data" asp-action="EditProfile" asp-controller="User">
+    <div class="preview text-center">
+
+        <input type="file"  value="@Model.ImagePreview" class="browse-input"  name="ImagePreview" id="fileInput" accept="image/*" onchange="previewFile()" />
+        <img id="preview"  class="preview-img"  width="200" height="200"  />
+
+    </div>
+    <div class="form-group">
+        <label>First Name:</label>
+        <input class="form-control" value="@Model.FirstName" type="text" name="FirstName" />
+        <span class="Error"></span>
+    </div>
+    <div class="form-group">
+        <label>Middle Name:</label>
+        <input class="form-control" value="@Model.MiddleName"  type="text" name="MiddleName" />
+        <span class="Error"></span>
+    </div>
+    <div class="form-group">
+        <label>Last Name:</label>
+        <input class="form-control" value="@Model.LastName" placeholder="@Model.FirstName" type="text" name="LastName" />
+        <span class="Error"></span>
+    </div>
+    <div class="form-group">
+        <label>Phone number:</label>
+        <input class="form-control" value="@Model.PhoneNumber" type="text" name="PhoneNumber" />
+        <span class="Error"></span>
+    </div>
+    <div class="form-group">
+        <input class="btn btn-primary btn-block" type="submit" value="Submit" />
+    </div>
+</form>
+
+<form id="userEditingInputs" asp-action="EditProfile" asp-controller="User" method="post">
+    <div class="edit-buttons">
+        <label for="image-input">Change photo:</label>
+        <input asp-for="Image" class="browse-input" type="file" required name="UploadedFile" id="UploadedFile" />
+    </div>
+
+    <div class="edit-buttons">
+        <label class="form-lable">New name</label>
+        <input asp-for="Username" type="text" class="form-controll" />
+    </div>
+
+
+</form>
+
+
+
+
+
+
+<div class="user-followersSection">
+
+    <div class="user-followingList">
+        <p>FOLLOWING</p>
+    </div>
+
+    <div class="user-followersList">
+        <p>FOLLOWERS</p>
+    </div>
+
+</div>
+
+<div class="badget-statistics">
+    <h2 id="statisticHeather">Your badges</h2>
+</div>
+
+
+
+<script>
+        function previewFile() {
+        var preview = document.getElementById('preview');
+        var file = document.getElementById('fileInput').files[0];
+        var reader = new FileReader();
+
+        reader.onloadend = function () {
+            preview.src = reader.result;
+        }
+    
+        if (file) {
+            reader.readAsDataURL(file);
+        } else {
+            preview.src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%2Fimages%3Fk%3Ddefault%2Buser&psig=AOvVaw14UysT82oay84eTybyjeYh&ust=1712147703421000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCIiUw7TFo4UDFQAAAAAdAAAAABAZ";
+        }
+    }
+
+
+   
+    </script>

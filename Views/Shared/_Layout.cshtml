@@ -1,0 +1,80 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - LanguageExchangeHub1</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LanguageExchangeHub1.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+
+                <div class="leftElements">
+
+
+
+                    <div class="dropdown">
+                        <button class="dropbtn" onclick="showMenuDropdownContent()">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                <path d="M12.5 16.6667H37.5M12.5 25H37.5M12.5 33.3333H37.5" stroke="#111111" stroke-width="4.16667" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </button>
+                        <div id="menuDropdown" class="dropdown-content">
+                            <a asp-controller="Home" asp-action="Index">Home</a>
+                            <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a href="#">Assignements</a>
+                            <a href="#">Chats</a>
+                            <a href="#">Files</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="title">
+                    LanguageExchangeHub
+                </div>
+
+                <div>
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            <a asp-controller="Identity" asp-action="Logout">Log out</a>
+                        }
+                    }
+
+                    <a asp-controller="User" asp-action="Profile" id="profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M33.3334 18.75C33.3334 20.9601 32.4554 23.0798 30.8926 24.6426C29.3298 26.2054 27.2102 27.0833 25.0001 27.0833C22.7899 27.0833 20.6703 26.2054 19.1075 24.6426C17.5447 23.0798 16.6667 20.9601 16.6667 18.75C16.6667 16.5399 17.5447 14.4203 19.1075 12.8574C20.6703 11.2946 22.7899 10.4167 25.0001 10.4167C27.2102 10.4167 29.3298 11.2946 30.8926 12.8574C32.4554 14.4203 33.3334 16.5399 33.3334 18.75ZM29.1667 18.75C29.1667 19.8551 28.7278 20.9149 27.9464 21.6963C27.165 22.4777 26.1052 22.9167 25.0001 22.9167C23.895 22.9167 22.8352 22.4777 22.0538 21.6963C21.2724 20.9149 20.8334 19.8551 20.8334 18.75C20.8334 17.6449 21.2724 16.5851 22.0538 15.8037C22.8352 15.0223 23.895 14.5833 25.0001 14.5833C26.1052 14.5833 27.165 15.0223 27.9464 15.8037C28.7278 16.5851 29.1667 17.6449 29.1667 18.75Z" fill="#111111" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M25 2.08334C12.3438 2.08334 2.08337 12.3438 2.08337 25C2.08337 37.6562 12.3438 47.9167 25 47.9167C37.6563 47.9167 47.9167 37.6562 47.9167 25C47.9167 12.3438 37.6563 2.08334 25 2.08334ZM6.25004 25C6.25004 29.3542 7.73546 33.3625 10.225 36.5458C11.9734 34.2498 14.229 32.3891 16.8155 31.109C19.4021 29.8289 22.2495 29.1642 25.1355 29.1667C27.9841 29.164 30.7957 29.8115 33.3561 31.06C35.9166 32.3084 38.1583 34.1248 39.9105 36.3708C41.7156 34.0033 42.931 31.24 43.4561 28.3096C43.9812 25.3791 43.8009 22.3657 42.9302 19.5187C42.0595 16.6717 40.5234 14.073 38.449 11.9376C36.3745 9.80214 33.8214 8.19138 31.0008 7.23856C28.1803 6.28575 25.1734 6.01828 22.2289 6.45828C19.2845 6.89828 16.4871 8.03311 14.0683 9.76886C11.6495 11.5046 9.67881 13.7914 8.31927 16.44C6.95972 19.0886 6.25042 22.0229 6.25004 25ZM25 43.75C20.6958 43.7565 16.5214 42.2757 13.1834 39.5583C14.527 37.6349 16.3153 36.0644 18.3963 34.9806C20.4772 33.8968 22.7892 33.3317 25.1355 33.3333C27.4525 33.3315 29.7365 33.8824 31.7978 34.9405C33.8591 35.9985 35.6383 37.533 36.9875 39.4167C33.6236 42.2223 29.3804 43.7561 25 43.75Z" fill="#111111" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - LanguageExchangeHub1 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

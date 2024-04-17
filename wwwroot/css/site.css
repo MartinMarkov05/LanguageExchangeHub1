@@ -1,0 +1,389 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+nav {
+    width: 100vw;
+    background-color: #D9D9D9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.nav-elements{
+    display:flex;
+    gap: 2em;
+
+}
+
+.dropbtn {
+   
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: #f1f1f1;
+    display: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    list-style-position: inside;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+.dropdown:hover .dropdown-content{
+    display:block;
+  
+
+}
+.show {
+    display: block;
+}
+
+
+nav ul{
+    list-style-type: none;
+}
+
+.coursesHeadings {
+    margin: 30px;
+    display: flex;
+    width: 921px;
+    height: 54px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    padding: 8px;
+}
+.course {
+    border-radius: 10px;
+    background: #D9D9D9;
+    width: 761px;
+    height: 200px;
+    flex-shrink: 0;
+}
+
+.goToCourses {
+    width: 200px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #A0FF98;
+}
+
+#menu {
+    margin: 5px;
+}
+
+#profile {
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+.title {
+    text-align: center;
+}
+
+.leftElements {
+    display: inline-flex;
+}
+
+.user-image-container {
+    width: 258px;
+    height: 256px;
+    flex-shrink: 0;
+    margin-left: 100px;
+}
+
+
+
+.user-info-container {
+    width: 361px;
+    height: 56px;
+    flex-shrink: 0;
+    margin-left: 45px;
+}
+.user-name {
+    display: flex;
+    width: 238px;
+    height: 61px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 25px;
+    font-weight: var(--base-text-weight-light, 300);
+}
+
+#image-container {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+#selected-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-followersSection {
+    width: 514px;
+    height: 136px; 
+    border-radius: 20px;
+    background: #D9D9D9; 
+    position: absolute;
+    top: 120px;
+    right: 175px;
+}
+
+.user-followingList {
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-left: 100px;
+    position: absolute;
+    left: 225px;
+}
+
+.user-followersList {
+    top: 80px;
+    right: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-left: 100px;
+    position: relative;
+}
+
+.badget-statistics {
+    width: 450px;
+    height: 500px;
+    border-radius: 20px;
+    background: #D9D9D9;
+    text-align: center;
+    position: fixed;
+    top: 300px;
+    left: 61.5%;
+    text-align: center;
+}
+
+#statisticHeather {
+    color: #000;
+    text-align: center;
+    
+    font-size: 42px;
+    
+    font-weight: 300;
+    line-height: normal;
+}
+
+.edit-buttons {
+    display: none;
+}
+
+    .edit-buttons button {
+        margin: 5px;
+        margin-left: 150px;
+        margin-right: -130px;
+        width: 120px;
+    }
+
+
+
+
+
+#editProfile {
+    margin-left: 100px;
+    width: 365px;
+    margin-top: 20px;
+    top:750px;
+    position:fixed;
+}
+
+#userEditingInputs {
+    margin-left: 100px;
+  
+}
+
+
+.courseCards {
+    gap: .25rem;
+    margin-top: 1rem;
+    display:grid;
+}
+
+.courseCard {
+    border: 1px solid black;
+    background-color: white;
+    width: 400px;
+    height: 100px;
+    border-radius: 6px;
+}
+
+.courseCard .header{
+    margin-bottom: .25rem;
+}
+
+.coursePreview {
+    visibility: hidden;
+    width: 400px;
+    height: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1);
+    padding: 0 30px 0 30px;
+    color: #333;
+    transition: transform 0.4s, top 0.4s;
+    border: 1px solid black;
+}
+
+
+    .coursePreview button {
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        background: #A0FF98;
+        border:0;
+        outline: none;
+        border-radius: 4px;
+    }
+    .show-preview {
+        visibility: visible;
+        
+        top: 50%;
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    .close-preview{
+        visibility:hidden;
+    }
+
+#img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#searchCourseSection {
+    position: absolute;
+    left: 60%;
+    top: 10%;
+}
+
+.scrolMenu {
+    width: 765px;
+    height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    
+}
+
+.Chat-RightSide {
+    position: absolute;
+}
+
+#members {
+    height: 70px;
+    width: 200px;
+    margin-left: 40px;
+}
+
+#requests {
+    height: 70px;
+    width: 200px;
+    margin-right: 40px;
+}
+
+.nav-rightSide {
+    width: 600px;
+    height: 100px;
+    position: absolute;
+    left: 800px;
+    border: 1px solid black;
+}
+
+#Chat-CourseHeader{
+    border-block-color:black;
+}
+
+.membersList {
+    display: none;
+    margin-top: 100px; 
+    position: absolute;
+    left: 850px;
+}
+
+.requestList {
+    display: none;
+   
+    margin-top: 100px;
+    position: absolute;
+    left: 1000px;
+}
+
+.request-card {
+    display: flex;
+    align-items: center; 
+    margin-top: 10px;
+}
+
+    .request-card form {
+        margin-left: 10px; 
+    }
+
+.userInput {
+    width: 87%;
+    border: 1px solid black;
+}
+
+.Chat{
+
+}
