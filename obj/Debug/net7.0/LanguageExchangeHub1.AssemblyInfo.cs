@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LanguageExchangeHub1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75893ee51ba07983913b5a3f669a683768f69de5")]
 [assembly: System.Reflection.AssemblyProductAttribute("LanguageExchangeHub1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LanguageExchangeHub1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,9 +6,9 @@ using LanguageExchangeHub1.Utilities;
 
 namespace LanguageExchangeHub1.Services.Models
 {
-	public class CourseUserViewModel : IMapFrom<CourseUser>, IMapTo<CourseUser>
+	public class CourseUserViewModel 
 	{
-        public string Id { get; set; }
+        public int Id { get; set; }
         public CourseViewModel Course { get; set; }
 
         

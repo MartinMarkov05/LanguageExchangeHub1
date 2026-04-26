@@ -9,12 +9,9 @@ using LanguageExchangeHub1.Utilities.RequestStatus;
 
 namespace LanguageExchangeHub1.Services.Models
 {
-	public class RequestViewModel : IMapFrom<Request>, IMapTo<Request>
+	public class RequestViewModel 
 	{
-
-		public UserViewModelForChat User { get; set; }
-
-		public CourseViewModelForChat Course { get; set; }
+		public string Username { get; set; }
 
 		public RequestStatus Status { get; set; }
 	}

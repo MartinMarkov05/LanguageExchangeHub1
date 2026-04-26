@@ -17,10 +17,24 @@ public class ApplicationDbContext : IdentityDbContext<User,Role,string>
     }
     
     public DbSet<Language> Languages { get; set; }
+
     public DbSet<Course> Courses { get; set; }
-   public DbSet<Request> Requests { get; set; }
+
+    public DbSet<Request> Requests { get; set; }
+
     public DbSet<CourseUser> CourseUsers { get; set; }
 
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
+        {
+            relationship.DeleteBehavior = DeleteBehavior.Restrict;
+        }
+    }
+
+  
 
 }
 

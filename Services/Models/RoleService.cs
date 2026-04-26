@@ -5,6 +5,7 @@ using LanguageExchangeHub1.Data.Models;
 using LanguageExchangeHub1.Repository;
 using LanguageExchangeHub1.Services.Base;
 using LanguageExchangeHub1.Services.Contracts;
+using LanguageExchangeHub1.Services.Models.Base;
 using LanguageExchangeHub1.Services.Models.Courses;
 using LanguageExchangeHub1.Utilities;
 using Microsoft.AspNetCore.Identity;
@@ -17,36 +18,31 @@ namespace LanguageExchangeHub1.Services.Models
         private readonly IEfRepository<Role> _roleRepository;
         private readonly RoleManager<Role> _roleManager;
 
-        public RoleService(IEfRepository<Role> roleRepository, IMapper mapper, IUserData userData, RoleManager<Role> roleManager)
-            : base(mapper, userData)
+        public RoleService(IServicesResourceProvider servicesResourceProvider, IUserData userData, RoleManager<Role> roleManager)
+            : base(userData,servicesResourceProvider)
         {
-            _roleRepository = roleRepository;
+            _roleRepository = ServicesResourceProvider.GetEfRepositoryOfType<Role>();
             _roleManager = roleManager;
         }
 
-        public async Task<Role> CreateAsync(RoleViewModel roleViewModel)
+        public async Task<OperationResponse> CreateAsync(RoleViewModel roleViewModel)
         {
             if (roleViewModel == null)
             {
                 throw new ArgumentNullException(nameof(roleViewModel));
             }
-            var modelForCreate = this.Mapper.Map<Role>(roleViewModel);
+
+            var modelForCreate = roleViewModel.MapRoleViewModelToRoleEntity();
             await _roleManager.CreateAsync(modelForCreate);
-          //  _roleRepository.Add(modelForCreate);
-           // await _roleRepository.SaveChangesAsync();
-            return modelForCreate;
+
+            return new OperationResponse { IsSuccessful = true };
         }
 
         public async Task<IEnumerable<RoleViewModel>> GetAllAsync()
         {
-            var roles = await _roleRepository.All().ToListAsync();
-            List<RoleViewModel> list = new List<RoleViewModel>();
-            foreach (var role in roles)
-            {
-                var result = Mapper.Map<RoleViewModel>(role);
-                list.Add(result);
-            }
-            return list;
+            return await _roleRepository.All()
+                .Select(r => r.MapRoleEntityToRoleViewModel())
+                .ToListAsync();
         }
     }
 }

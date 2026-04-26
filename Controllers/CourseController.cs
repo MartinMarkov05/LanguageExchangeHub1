@@ -25,18 +25,16 @@ namespace LanguageExchangeHub1.Controllers
         public readonly ILanguageService _languageService;
         public readonly IUserService _userService;
         private readonly IUserData _userData;
-        private readonly ICourseUserService _courseUserService;
         private readonly IRequestService _requestService;
 
         public CourseController(ICourseService courseService, ILanguageService languageService,
-            IUserService userService, IUserData userData, ICourseUserService courseUserService,
+            IUserService userService, IUserData userData,
             IRequestService requestService)
         {
             _courseService = courseService;
             _languageService = languageService;
             _userService = userService;
             _userData = userData;
-            _courseUserService = courseUserService;
             _requestService = requestService;
         }
 
@@ -75,22 +73,23 @@ namespace LanguageExchangeHub1.Controllers
         }
 
 
-        public async Task<IActionResult> CourseChat(string courseId)
+        public async Task<IActionResult> CourseChat(int courseId)
         {
             CourseViewModel course = await _courseService.GetAsync(courseId);
            
            
             return View(course);
         }
+
         [HttpPost]
-        public async Task<IActionResult> Request(string courseId)
+        public async Task<IActionResult> Request(int courseId)
         {
-            
-            
+
+
             var request = await _requestService.CreateAsync(courseId);
-           
-           
-            return View("Index");
+
+
+            return View();
         }
     }
 }

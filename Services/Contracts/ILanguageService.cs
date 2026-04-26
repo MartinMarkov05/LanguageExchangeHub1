@@ -10,9 +10,9 @@ namespace LanguageExchangeHub1.Services.Contracts
 	{
         Task<List<Language>> GetAllAsync();
 
-        Task<Language> GetAsync(string languageId);
+     
 
-        Task<Language> CreateAsync(Language language);
+      
     }
 }
 

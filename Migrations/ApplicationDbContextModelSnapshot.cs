@@ -18,6 +18,9 @@ namespace LanguageExchangeHub1.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "7.0.14")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -30,9 +33,8 @@ namespace LanguageExchangeHub1.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CourseId")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("CourseId")
+                        .HasColumnType("integer");
 
                     b.Property<string>("UserId")
                         .IsRequired()
@@ -49,9 +51,11 @@ namespace LanguageExchangeHub1.Migrations
 
             modelBuilder.Entity("LanguageExchangeHub1.Data.Models.Course", b =>
                 {
-                    b.Property<string>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("text");
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -108,9 +112,8 @@ namespace LanguageExchangeHub1.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CourseId")
-                        .IsRequired()
-                        .HasColumnType("text");
+                    b.Property<int>("CourseId")
+                        .HasColumnType("integer");
 
                     b.Property<int>("RequestStatus")
                         .HasColumnType("integer");
@@ -344,13 +347,13 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.Course", "Course")
                         .WithMany("Members")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("LanguageExchangeHub1.Data.Models.User", "User")
                         .WithMany("UserCourses")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -363,13 +366,13 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.Language", "Language")
                         .WithMany()
                         .HasForeignKey("LanguageId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("LanguageExchangeHub1.Data.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Language");
@@ -382,13 +385,13 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.Course", "Course")
                         .WithMany("Requests")
                         .HasForeignKey("CourseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("LanguageExchangeHub1.Data.Models.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Course");
@@ -401,7 +404,7 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.Role", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -410,7 +413,7 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -419,7 +422,7 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -428,13 +431,13 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.Role", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("LanguageExchangeHub1.Data.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 
@@ -443,7 +446,7 @@ namespace LanguageExchangeHub1.Migrations
                     b.HasOne("LanguageExchangeHub1.Data.Models.User", null)
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
 

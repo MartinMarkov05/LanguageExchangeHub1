@@ -1,8 +1,6 @@
 ﻿<Properties StartupConfiguration="{9EB50183-41AC-4F42-A889-B76E9E1CEA59}|https">
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.LanguageExchangeHub1 PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Repository/EfRepository.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/User/Profile.cshtml">
     <Files>
       <File FileName="appsettings.json" />
       <File FileName="Program.cs" />
@@ -14,8 +12,8 @@
       <File FileName="wwwroot/css/site.css" />
       <File FileName="Views/Shared/_Layout.cshtml.css" />
       <File FileName="wwwroot/js/site.js" />
-      <File FileName="Views/Home/Index.cshtml" Line="139" Column="34" />
-      <File FileName="Controllers/HomeController.cs" Line="59" Column="8" />
+      <File FileName="Views/Home/Index.cshtml" />
+      <File FileName="Controllers/HomeController.cs" />
       <File FileName="Views/_ViewImports.cshtml" />
       <File FileName="Views/Shared/_LoginPartial.cshtml" />
       <File FileName="Controllers/UserController.cs" />
@@ -25,13 +23,12 @@
       <File FileName="Views/_ViewStart.cshtml" />
       <File FileName="Views/Shared/Error.cshtml" />
       <File FileName="Areas/Identity/Pages/_ViewStart.cshtml" />
-      <File FileName="Views/User/Profile.cshtml" />
+      <File FileName="Views/User/Profile.cshtml" Line="10" Column="5" />
       <File FileName="Data/Models/Role.cs" />
       <File FileName="Views/Identity/Login.cshtml" />
-      <File FileName="Views/Identity/CreateAccount.cshtml" Line="58" Column="76" />
-      <File FileName="Controllers/IdentityController.cs" Line="73" Column="1" />
+      <File FileName="Views/Identity/CreateAccount.cshtml" />
+      <File FileName="Controllers/IdentityController.cs" />
       <File FileName="Controllers/BaseController.cs" />
-      <File FileName="Utilities/MappingProfile.cs" />
       <File FileName="Services/Base/UserData.cs" />
       <File FileName="Services/Base/BaseService.cs" />
       <File FileName="Services/Base/IUserData.cs" />
@@ -39,35 +36,28 @@
       <File FileName="Services/Models/Users/UserLoginModel.cs" />
       <File FileName="Services/Models/Users/UserViewModel.cs" />
       <File FileName="Services/Models/Base/OperationResponse.cs" />
-      <File FileName="Utilities/IMapFrom.cs" />
-      <File FileName="Utilities/IMapTo.cs" />
-      <File FileName="Services/Models/UserService.cs" Line="65" Column="1" />
-      <File FileName="Services/Models/Users/UserRegistrationModel.cs" Line="23" Column="36" />
-      <File FileName="app.db" />
+      <File FileName="Services/Models/UserService.cs" />
+      <File FileName="Services/Models/Users/UserRegistrationModel.cs" />
       <File FileName="Repository/IEfRepository.cs" />
-      <File FileName="Repository/EfRepository.cs" Line="87" Column="17" />
+      <File FileName="Repository/EfRepository.cs" />
       <File FileName="Repository/SaveResult.cs" />
       <File FileName="Views/User/Assignements.cshtml" />
-      <File FileName="Data/Models/Course.cs" Line="13" Column="1" />
+      <File FileName="Data/Models/Course.cs" Line="1" Column="1" />
       <File FileName="Controllers/RolesController.cs" />
       <File FileName="Views/Roles/CreateRole.cshtml" />
       <File FileName="Views/User/AddMember.cshtml" />
       <File FileName="Services/Models/Courses/CourseViewModel.cs" />
-      <File FileName="Controllers/CourseController.cs" Line="90" Column="1" />
+      <File FileName="Controllers/CourseController.cs" />
       <File FileName="Services/Contracts/ILanguageService.cs" />
       <File FileName="Services/Models/LanguageService.cs" />
       <File FileName="Views/Course/CreateCourse.cshtml" />
-      <File FileName="Services/Models/CourseService.cs" Line="62" Column="22" />
+      <File FileName="Services/Models/CourseService.cs" />
       <File FileName="Views/Course/AddMember.cshtml" />
       <File FileName="Services/Contracts/ICourseService.cs" />
-      <File FileName="Services/Models/Courses/CourseFilter.cs" />
       <File FileName="Services/Models/Roles/RoleViewModel.cs" />
       <File FileName="Services/Contracts/IRoleService.cs" />
-      <File FileName="Services/Models/RoleService.cs" Line="40" Column="53" />
+      <File FileName="Services/Models/RoleService.cs" />
       <File FileName="Data/Models/CourseUser.cs" />
-      <File FileName="Controllers/CourseUserController.cs" />
-      <File FileName="Services/Contracts/ICourseUserService.cs" />
-      <File FileName="Services/Models/CourseUserService.cs" />
       <File FileName="Views/Course/CourseChat.cshtml" />
       <File FileName="Services/Models/CourseUser/CourseUserViewModel.cs" />
       <File FileName="Views/Home/Privacy.cshtml" />
@@ -80,76 +70,48 @@
       <File FileName="Data/Models/Request.cs" />
       <File FileName="Utilities/RequestStatus/RequestStatus.cs" />
       <File FileName="Services/Contracts/IRequestService.cs" />
-      <File FileName="Services/Models/RequestService.cs" Line="42" Column="1" />
+      <File FileName="Services/Models/RequestService.cs" />
       <File FileName="Services/Models/Request/RequestViewModel.cs" />
       <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.311/Microsoft.Common.CurrentVersion.targets" />
-      <File FileName="Migrations/20240302102754_InitialCreate.cs" />
+      <File FileName="Utilities/RequestMapper.cs" />
+      <File FileName="Utilities/RoleMapper.cs" />
+      <File FileName="LanguageExchangeHub1.csproj" />
+      <File FileName="Services/Base/IServicesResourceProvider.cs" />
+      <File FileName="Services/Base/SingleServiceResourceProvider.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="LanguageExchangeHub1">
             <Node name="LanguageExchangeHub1">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Areas" expanded="True">
-                <Node name="Identity" expanded="True" />
-              </Node>
-              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True">
                 <Node name="Models" expanded="True" />
               </Node>
-              <Node name="Migrations" expanded="True" />
-              <Node name="Repository">
-                <Node name="EfRepository.cs" selected="True" />
-              </Node>
-              <Node name="Services" expanded="True">
-                <Node name="Base" expanded="True" />
-                <Node name="Contracts" expanded="True" />
-                <Node name="Models" expanded="True">
-                  <Node name="Courses" expanded="True" />
-                  <Node name="CourseUser" expanded="True" />
-                  <Node name="Index" expanded="True" />
-                  <Node name="Request" expanded="True" />
-                  <Node name="Roles" expanded="True" />
-                  <Node name="Users" expanded="True" />
-                </Node>
-              </Node>
-              <Node name="Utilities" expanded="True">
-                <Node name="RequestStatus" expanded="True" />
-              </Node>
               <Node name="Views" expanded="True">
-                <Node name="Course" expanded="True" />
-                <Node name="Home" expanded="True" />
-                <Node name="Identity" expanded="True" />
-                <Node name="Roles" expanded="True" />
-                <Node name="Shared" expanded="True" />
-                <Node name="User" expanded="True" />
-              </Node>
-              <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
+                <Node name="User" expanded="True">
+                  <Node name="Profile.cshtml" selected="True" />
+                </Node>
               </Node>
             </Node>
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.LanguageExchangeHub1 PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/CourseUserService.cs" relfile="Services/Models/CourseUserService.cs" line="70" column="1" />
-      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Views/User/Profile.cshtml" relfile="Views/User/Profile.cshtml" line="1" column="1" />
       <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/CourseUserService.cs" relfile="Services/Models/CourseUserService.cs" line="42" column="1" />
-      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Utilities/UserMapper.cs" relfile="Utilities/UserMapper.cs" line="27" column="1" />
-      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Repository/EfRepository.cs" relfile="Repository/EfRepository.cs" line="80" column="1" />
       <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Controllers/CourseController.cs" relfile="Controllers/CourseController.cs" line="87" column="1" />
-      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/CourseService.cs" relfile="Services/Models/CourseService.cs" line="94" column="1" />
-      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/RequestService.cs" relfile="Services/Models/RequestService.cs" line="31" column="1" />
+      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/CourseService.cs" relfile="Services/Models/CourseService.cs" line="79" column="1" />
+      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/RequestService.cs" relfile="Services/Models/RequestService.cs" line="28" column="1" />
       <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Controllers/IdentityController.cs" relfile="Controllers/IdentityController.cs" line="103" column="1" />
-      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/UserService.cs" relfile="Services/Models/UserService.cs" line="41" column="1" />
+      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Utilities/CourseMapper.cs" relfile="Utilities/CourseMapper.cs" line="26" column="1" />
+      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Controllers/HomeController.cs" relfile="Controllers/HomeController.cs" line="36" column="1" />
+      <Breakpoint file="/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/Services/Models/CourseService.cs" relfile="Services/Models/CourseService.cs" line="96" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
 </Properties>

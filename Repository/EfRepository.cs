@@ -1,12 +1,13 @@
 ﻿using System;
 using LanguageExchangeHub1.Data;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace LanguageExchangeHub1.Repository
 {
-	public class EfRepository<T> :  DbContext, IEfRepository<T> where T:class
-	{
-
+	public class EfRepository<T> : IdentityDbContext, IEfRepository<T> where T : class
+    {
+        private readonly SemaphoreSlim semaphoreSlim = new SemaphoreSlim(1);
         protected ApplicationDbContext DbContext { get; set; }
         protected DbSet<T> DbSet { get; set; }
 
@@ -77,6 +78,7 @@ namespace LanguageExchangeHub1.Repository
 
         public async Task<int> SaveChangesAsync()
         {
+            await this.semaphoreSlim.WaitAsync();
             try
             {
               var result= await this.DbContext.SaveChangesAsync();

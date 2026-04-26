@@ -6,7 +6,7 @@ using LanguageExchangeHub1.Data.Models;
 public class CourseUser
 {
     [ForeignKey(nameof(Course))]
-    public string CourseId { get; set; }
+    public int CourseId { get; set; }
     public virtual Course Course { get; set; }
 
     [ForeignKey(nameof(User))]

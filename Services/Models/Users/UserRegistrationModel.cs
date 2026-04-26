@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace LanguageExchangeHub1.Services.Models.Users
 {
-	public class UserRegistrationModel : IMapFrom<User>, IMapTo<User>
+	public class UserRegistrationModel 
     {
         [Required]
         public string Username { get; set; }

@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets/LanguageExchangeHub1.bundle.scp.css"
     },
     {
-      "Id": "/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/wwwroot/.DS_Store",
-      "PackagePath": "staticwebassets/.DS_Store"
-    },
-    {
       "Id": "/Users/martinmarkov/Projects/LanguageExchangeHub1/LanguageExchangeHub1/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },

@@ -16,13 +16,13 @@ namespace LanguageExchangeHub1.Controllers
     public class UserController : Controller
     {
 
-        private readonly ApplicationDbContext _dbContext;
+  
         private readonly UserManager<User> _userManager;
         private readonly IUserService _userService;
 
-        public UserController(ApplicationDbContext applicationDbContext, UserManager<User> userManager, IUserService userService)
+        public UserController(UserManager<User> userManager, IUserService userService)
         {
-            _dbContext = applicationDbContext;
+    
 
             _userManager = userManager;
             _userService = userService;

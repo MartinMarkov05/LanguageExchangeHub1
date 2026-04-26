@@ -15,22 +15,19 @@ namespace LanguageExchangeHub1.Controllers;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+ 
     private readonly ICourseService _courseService;
     private readonly ILanguageService _languageService;
-    private readonly IUserService _userService;
-    private readonly IUserData _userData;
-    private readonly ICourseUserService _courseUserService;
+    private readonly IRequestService _requestService;
 
-    public HomeController(ILogger<HomeController> logger, ICourseService courseService,
-        ILanguageService languageService, IUserService userService, IUserData userData, ICourseUserService courseUserService)
+    public HomeController( ICourseService courseService,
+        ILanguageService languageService, IRequestService requestService)
     {
-        _logger = logger;
+    
         _courseService = courseService;
         _languageService = languageService;
-        _userService = userService;
-        _userData = userData;
-        _courseUserService = courseUserService;
+        _requestService = requestService;
+
     }
     
 
@@ -79,11 +76,11 @@ public class HomeController : Controller
 
     public async Task<IActionResult> Search(string query)
     {
-        var courses=  await _courseService.GetAllByNameAsync(query);
+        var courses=  await _courseService.GetCoursesByNameAndLangAsync(query);
         
         return View(courses);
     }
 
-    
+
 }
 

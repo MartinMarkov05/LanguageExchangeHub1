@@ -6,13 +6,13 @@
 <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
     
 
-       <h1>@Model.Name</h1> 
+       <h1>@Model.Name</h1>
+        <button class="General" onclick="showCourseChatPage()">General</button>
+    <button class="Assignements" onclick="showCourseAssignementPage()">Assignements</button>
     
 </nav>
-<div class="Chat">
-
-    
-</div>
+<div class="ChatPage">
+    <div class="Chat-LeftSide"></div>
 <div class="Chat-RightSide">
     <nav class="nav-rightSide">
 
@@ -37,23 +37,40 @@
                 {
                     <div class="request-card">
 
-                        <div>@item.User.Username</div>
+                        <div>@item.Username</div>
                         <button asp-action="SetStatus">Accept</button>
                         <button asp-action="SetStatus">Reject</button>
 
 
                     </div>
-                    <div class="member-card">@item.User.Username</div>
+                    <div class="member-card">@item.Username</div>
                 }
             }
 
         }
     </div>
 </div>
+    
+</div>
+
+<div class="AssignementsPage">
+
+</div>
 
 
 <script>
     function showMembers() {
         document.getElementsByClassName('membersList').style.display = 'block';
+    }
+
+    function showCourseChatPage() {
+        var chatpage = document.getElementsByClassName("ChatPage");
+        chatpage.style.display = 'block';
+        document.getElementsByClassName('AssignementsPage').style.display = 'hidden';
+    }
+
+    function showCourseAssignementPage() {
+        document.getElementsByClassName('AssignementsPage').style.display = 'block';
+        document.getElementsByClassName('ChatPage').style.display = 'hidden';
     }
 </script>

@@ -10,39 +10,66 @@ namespace LanguageExchangeHub1.Utilities
 	{
 
 
-		public static async Task<CourseViewModelForChat> MapCourseForChat(Course course)
+		public static CourseViewModelForChat MapCourseEntityToCourseForChat(this Course course)
 		{
-			CourseViewModelForChat courseForChat = new CourseViewModelForChat
+			return new CourseViewModelForChat
 			{
 				Id = course.Id,
 				Name = course.Name,
 				Description = course.Description
 			};
 
-			return courseForChat;
+
 		}
 
-		public static  CourseViewModel MapToViewModel(this Course course, List<UserViewModelForChat> members)
+		public static  CourseViewModel MapCourseEntityToCourseViewModel(this Course course)
 		{
 
 
+            var members = new List<UserViewModelForChat>();
 
+            if (course.Members != null)
+            {
+                foreach (var member in course.Members)
+                {
+                    members.Add(member.User.MapUserEntityToUserForChat());
+                }
+            }
 
-			CourseViewModel courseViewModel = new CourseViewModel
+            var requests = new List<RequestViewModel>();
+
+            if (course.Requests != null)
+            {
+                foreach (var request in course.Requests)
+                {
+                    requests.Add(request.MapRequestEntityToRequestViewModel());
+                }
+            }
+
+            return new CourseViewModel
 			{
-				Members = members,
+				
 				Id = course.Id,
 				Name = course.Name,
 				Image = course.Image,
 				Description = course.Description,
-				LanguageId = course.LanguageId
-				
-			};
+				LanguageId = course.LanguageId,
+                Requests = requests,
+				Members = members
+            };
 
-			return courseViewModel;
+			
 		}
 
-		//public static Course MapToModel(CourseViewModel)
+		public static void MapCourseViewModelToCourseEntity(this CourseViewModel courseViewModel, ref Course course, string userId)
+		{
+			course.Id = courseViewModel.Id;
+			course.Name = courseViewModel.Name;
+			course.Description = courseViewModel.Description;
+			course.LanguageId = courseViewModel.LanguageId;
+			course.UserId = userId;
+			course.Image = courseViewModel.Image;
+		}
 	}
 }
 

@@ -7,19 +7,21 @@ namespace LanguageExchangeHub1.Services.Base
 {
     public abstract class BaseService
     {
-        
 
-        protected readonly IMapper Mapper;
-        protected readonly IUserData UserData;
-        
 
-        public BaseService(IMapper mapper,IUserData userData)
+
+        protected IServicesResourceProvider ServicesResourceProvider { get; private set; }
+
+        protected IUserData UserData { get; private set; }
+
+
+        public BaseService(IUserData userData, IServicesResourceProvider servicesResourceProvider)
            
         {
             this.UserData = userData;
-            this.Mapper = mapper;
-            
-           
+
+
+            this.ServicesResourceProvider = servicesResourceProvider;
 
 
         }

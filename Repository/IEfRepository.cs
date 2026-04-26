@@ -1,23 +1,6 @@
-﻿using System;
-namespace LanguageExchangeHub1.Repository
+﻿namespace LanguageExchangeHub1.Services.Base
 {
-	public interface IEfRepository <T>: IDisposable
-	{
-        void Add(T entity);
-
-         IQueryable<T> All();
-
-        void Delete(T entity);
-
-        void Delete(params object[] id);
-
-        T GetById(params object[] id);
-
-        void Update(T entity);
-        
-         Task<int> SaveChangesAsync();
-
-        
+    public interface IEfRepository
+    {
     }
 }
-

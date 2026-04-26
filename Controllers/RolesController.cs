@@ -17,13 +17,12 @@ namespace LanguageExchangeHub1.Controllers
 {
     public class RolesController : Controller
     {
-        private readonly RoleManager<Role> _roleManager;
+
         public readonly IRoleService _roleService;
 
 
-        public RolesController(RoleManager<Role> roleManager, IRoleService roleService)
+        public RolesController(IRoleService roleService)
         {
-            _roleManager = roleManager;
             _roleService = roleService;
 
         }

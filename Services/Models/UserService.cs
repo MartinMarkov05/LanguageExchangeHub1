@@ -12,6 +12,7 @@ using LanguageExchangeHub1.Services.Models.Courses;
 using LanguageExchangeHub1.Services.Models.Users;
 using LanguageExchangeHub1.Utilities;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace LanguageExchangeHub1.Services.Models
 {
@@ -22,45 +23,45 @@ namespace LanguageExchangeHub1.Services.Models
         private readonly UserManager<User> userManager;
 
 
-        public UserService(IMapper mapper,
+        public UserService(
 
-                       IEfRepository<User> userRepository
+                     IServicesResourceProvider servicesResourceProvider
                        ,
                        UserManager<User> userManager,
                        IUserData userData
                       )
 
-        : base(mapper, userData)
+        : base(userData,servicesResourceProvider)
         {
 
             this.userManager = userManager;
-            this.userRepository = userRepository;
+            this.userRepository = ServicesResourceProvider.GetEfRepositoryOfType<User>();
         }
 
-        public async Task<OperationResponse> CreateAsync(UserRegistrationModel model, string role)
+        public async Task<OperationResponse> CreateAsync(UserRegistrationModel model)
         {
             if (model == null)
             {
                 return new OperationResponse { IsSuccessful = false, ErrorMessage = "Моделът не е валиден!" };
             }
 
-
-
-            var users = this.userRepository.All().Where(u => u.UserName == model.Username && u.Email == model.Email).ToList();
+            var users = userRepository.All().Where(u => u.UserName == model.Username && u.Email == model.Email).ToList();
 
             if (users.Any())
             {
                 return new OperationResponse { IsSuccessful = false, ErrorMessage = "Потребителят съществува!" };
             }
 
-            var modelForCreate = this.Mapper.Map<User>(model);
-            var response = await this.userManager.CreateAsync(modelForCreate, model.Password);
+            var modelForCreate = model.MapUserRegistrationModelToUserEntity();
+            var response = await userManager.CreateAsync(modelForCreate, model.Password);
 
             if (!response.Succeeded)
             {
                 return new OperationResponse { IsSuccessful = false, ErrorMessage = "Неуспешно създаване на потребителя!" };
             }
-            await userManager.AddToRoleAsync(modelForCreate, role);
+
+            await userManager.AddToRoleAsync(modelForCreate, model.Role);
+
             return new OperationResponse { IsSuccessful = true };
         }
 
@@ -70,47 +71,32 @@ namespace LanguageExchangeHub1.Services.Models
             user.UserName = viewModel.Username;
             userRepository.Update(user);
             await userRepository.SaveChangesAsync();
-            var newViewModel = Mapper.Map<UserViewModel>(user);
+            var newViewModel = user.MapUserEntityToUserViewModel();
             return newViewModel;
         }
 
         public async Task<List<UserViewModel>> GetAllAsync()
         {
-            var response = this.userRepository.All();
-            return this.Mapper.Map<List<UserViewModel>>(response);
+            return await userRepository.All()
+                .Select(u => u.MapUserEntityToUserViewModel())
+                .ToListAsync();
         }
 
-        public async Task<UserViewModel> GetUserByIdAsync(string userID)        {
+        public async Task<UserViewModel> GetUserByIdAsync(string userID)
+        {
 
-                var userEntity = userRepository.All().FirstOrDefault(u => u.Id == userID);
+            var userEntity = await userRepository.All().FirstOrDefaultAsync(u => u.Id == userID)
+                ?? throw new Exception("User not found");
 
-                if (userEntity == null)
-                {
-                    // User not found, handle accordingly (throw an exception, return null, etc.)
-                    throw new Exception("User not found");
-                }
-
-            var userViewModel = await UserMapper.MapToViewModel(userEntity);
-
-                return userViewModel;
-            
-}
+            return userEntity.MapUserEntityToUserViewModel();
+        }
 
         public async Task<UserViewModel> GetUserByNameAsync(string userName)
         {
+            var userEntity = await userRepository.All().FirstOrDefaultAsync(u => u.UserName == userName)
+                ?? throw new Exception("User not found");
 
-            var userEntity = userRepository.All().FirstOrDefault(u => u.UserName == userName);
-
-            if (userEntity == null)
-            {
-                // User not found, handle accordingly (throw an exception, return null, etc.)
-                throw new Exception("User not found");
-            }
-
-            // Map the user entity to UserViewModel
-            var userViewModel = Mapper.Map<UserViewModel>(userEntity);
-
-            return userViewModel;
+            return userEntity.MapUserEntityToUserViewModel();
         }
 
 

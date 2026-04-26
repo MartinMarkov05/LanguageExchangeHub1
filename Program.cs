@@ -12,13 +12,16 @@ using LanguageExchangeHub1.Utilities;
 using LanguageExchangeHub1.Services;
 using LanguageExchangeHub1.Controllers;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-options.UseNpgsql(connectionString, b => b.MigrationsAssembly("LanguageExchangeHub1")).EnableSensitiveDataLogging()
+options.UseLazyLoadingProxies().UseNpgsql(connectionString, b => b.MigrationsAssembly("LanguageExchangeHub1")).EnableSensitiveDataLogging()
 );
+
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -37,33 +40,28 @@ builder.Services.AddIdentity<User, Role>(options =>
 .AddEntityFrameworkStores<ApplicationDbContext>()
 .AddDefaultTokenProviders();
 
-
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Identity/Login";
     options.LogoutPath = "/Identity/Logout";
     
 });
-builder.Services.AddSingleton(new MapperConfiguration(cfg => cfg.AddProfile(new MappingProfile())));
-builder.Services.AddScoped(x => x.GetRequiredService<MapperConfiguration>().CreateMapper());
+
+
 
 // Add services to the container.
 builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
 builder.Services.AddControllersWithViews();
-builder.Services.AddTransient<IEfRepository<User>, EfRepository<User>>();
+
+builder.Services.AddScoped<IServicesResourceProvider, SingleServiceResourceProvider>();
+builder.Services.AddTransient(typeof(IEfRepository<>), typeof(EfRepository<>));
+
 builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IUserData, UserData>();
 builder.Services.AddTransient<IdentityRole>();
 builder.Services.AddTransient<ICourseService, CourseService>();
 builder.Services.AddTransient<ILanguageService, LanguageService>();
-builder.Services.AddTransient<IEfRepository<Language>, EfRepository<Language>>();
-builder.Services.AddTransient<IEfRepository<Course>, EfRepository<Course>>();
 builder.Services.AddTransient<IRoleService, RoleService>();
-builder.Services.AddTransient<IEfRepository<Role>, EfRepository<Role>>();
-
-builder.Services.AddTransient<IEfRepository<CourseUser>, EfRepository<CourseUser>>();
-builder.Services.AddTransient<ICourseUserService, CourseUserService>();
-builder.Services.AddTransient<IEfRepository<Request>, EfRepository<Request>>();
 builder.Services.AddTransient<IRequestService, RequestService>();
 
 

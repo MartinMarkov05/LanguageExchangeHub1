@@ -8,20 +8,18 @@ namespace LanguageExchangeHub1.Utilities
     {
      
 
-        public static  UserViewModelForChat MapUserForChat( this User user)
+        public static  UserViewModelForChat MapUserEntityToUserForChat( this User user)
         {
-            UserViewModelForChat userViewModelForChat = new UserViewModelForChat
+            return new UserViewModelForChat
             {
                 Id = user.Id,
                 Username = user.UserName,
-                Email = user.Email,
+                Email = user.Email
                
             };
-
-            return userViewModelForChat;
         }
 
-        public static async Task<UserViewModel>MapToViewModel(User user)
+        public static UserViewModel MapUserEntityToUserViewModel(this User user)
         {
 
             var courseModels = new List<CourseViewModelForChat>();
@@ -29,16 +27,12 @@ namespace LanguageExchangeHub1.Utilities
             {
             foreach (var courseUser in user.UserCourses)
             {
-                var courseForChat = await CourseMapper.MapCourseForChat(courseUser.Course);
-                
-                
-
-               courseModels.Add(courseForChat);
+                    courseModels.Add(courseUser.Course.MapCourseEntityToCourseForChat());
             }
             }
 
 
-            UserViewModel userViewModel = new UserViewModel
+            return new UserViewModel
             {
                 UserCourses = courseModels,
                 Username = user.UserName,
@@ -46,7 +40,22 @@ namespace LanguageExchangeHub1.Utilities
                 Id = user.Id,
                 Email = user.Email
             };
-            return userViewModel;
+         
         }
+
+
+        public static User MapUserRegistrationModelToUserEntity(this UserRegistrationModel model) {
+
+            return new User
+
+            {
+            
+                UserName = model.Username,
+                
+                Email = model.Email
+               
+            };
+        }
+
     }
 }

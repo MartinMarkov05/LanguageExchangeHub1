@@ -4,8 +4,10 @@ using LanguageExchangeHub1.Utilities;
 
 namespace LanguageExchangeHub1.Services.Models.Base
 {
-    public class OperationResponse : IMapFrom<SaveResult>
+    public class OperationResponse 
     {
+      
+
         public bool IsSuccessful { get; set; }
 
         public string ErrorMessage { get; set; }

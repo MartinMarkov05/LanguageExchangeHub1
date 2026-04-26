@@ -124,7 +124,7 @@
                     
                 @using (Html.BeginForm("Request", "Course", FormMethod.Post ))
                 {
-                    <input type="text" id="previewId"  name="courseId" />
+                    <input hidden type="text" id="previewId"  name="courseId" />
 
                    
                     <button type="submit" placeholder="Request To Join" class="RequestToJoin">Request to join</button>
@@ -136,7 +136,7 @@
 
 
         </section>
-        @if (User.IsInRole("Admin"))
+        @if (User.IsInRole("Admin") || User.IsInRole("Teacher"))
         {
             <a href="@Url.Action("CreateCourse", "Course")" class="btn btn-primary">Create Course</a>
         }

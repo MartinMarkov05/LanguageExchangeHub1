@@ -9,15 +9,16 @@ namespace LanguageExchangeHub1.Data.Models
     public class Course
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Id { get; set; }
+     
+        public int Id { get; set; }
+
         public string Name { get; set; }
+
         public string Description { get; set; }
+
         [Display(Name = "Image")]
         public byte[]? Image { get; set; }
-        [InverseProperty(nameof(CourseUser.Course))]
-        public virtual List<CourseUser> Members { get; set; }
-        
+          
         [ForeignKey(nameof(Language))]
 		public int LanguageId { get; set; }
         public virtual Language Language { get; set; }
@@ -25,6 +26,9 @@ namespace LanguageExchangeHub1.Data.Models
         [ForeignKey(nameof(User))]
         public string UserId { get; set; }
         public virtual User User { get; set; }
+
+        [InverseProperty(nameof(CourseUser.Course))]
+        public virtual List<CourseUser> Members { get; set; }
 
         [InverseProperty(nameof(Request.Course))]
         public virtual List<Request> Requests { get; set; }

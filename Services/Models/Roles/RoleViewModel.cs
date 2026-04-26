@@ -5,10 +5,10 @@ using LanguageExchangeHub1.Utilities;
 
 namespace LanguageExchangeHub1.Services.Models
 {
-	public class RoleViewModel : IMapFrom<Role>, IMapTo<Role>
+	public class RoleViewModel 
 	{
 
-		public string Id { get; set; }
+		
 		[Required]
 		public string Name { get; set; }
 	}

@@ -10,7 +10,7 @@ namespace LanguageExchangeHub1.Services.Contracts
 
         Task<UserViewModel> GetUserByIdAsync(string userId);
 
-        Task<OperationResponse> CreateAsync(UserRegistrationModel model,string role);
+        Task<OperationResponse> CreateAsync(UserRegistrationModel model);
 
         Task<UserViewModel> GetUserByNameAsync(string userName);
         Task<UserViewModel> EditProfile(UserViewModel viewModel);

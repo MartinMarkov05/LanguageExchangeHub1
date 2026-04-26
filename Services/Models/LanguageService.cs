@@ -15,35 +15,26 @@ namespace LanguageExchangeHub1.Services.Models
 	public class LanguageService : BaseService, ILanguageService
 	{
         private readonly IEfRepository<Language> languageRepository;
-        private readonly UserManager<User> userManager;
+        
 
-        public LanguageService(IMapper mapper,
+        public LanguageService(
 
-                 IEfRepository<Language> languageRepository
+                 IServicesResourceProvider servicesResourceProvider
                  ,
-                 UserManager<User> userManager,
+               
                  IUserData userData )
-            :base(mapper,userData)
+            :base(userData, servicesResourceProvider)
 		{
-            this.userManager = userManager;
-            this.languageRepository = languageRepository;
+          
+            this.languageRepository = ServicesResourceProvider.GetEfRepositoryOfType<Language>();
         }
 
-        public Task<Language> CreateAsync(Language language)
-        {
-            throw new NotImplementedException();
-        }
 
         public async Task<List<Language>> GetAllAsync()
         {
-            var languages = await languageRepository.All().ToListAsync();
-            return languages; 
+            return await this.languageRepository.All().ToListAsync();
         }
 
-        public Task<Language> GetAsync(string languageId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
 

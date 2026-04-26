@@ -5,43 +5,42 @@ using LanguageExchangeHub1.Repository;
 using LanguageExchangeHub1.Services.Base;
 using LanguageExchangeHub1.Services.Contracts;
 using LanguageExchangeHub1.Services.Models;
+using LanguageExchangeHub1.Services.Models.Base;
 using LanguageExchangeHub1.Services.Models.Courses;
 using LanguageExchangeHub1.Services.Models.Users;
 using LanguageExchangeHub1.Utilities.RequestStatus;
+using Microsoft.EntityFrameworkCore;
 
 namespace LanguageExchangeHub1.Services
 {
 	public class RequestService : BaseService, IRequestService
 	{
         private readonly IEfRepository<Request> requestRepository;
-        private readonly ICourseService courseService;
-        private readonly IUserService userService;
 
-        public RequestService(IMapper mapper, IUserData userData
-            , IEfRepository<Request> requestRepository,
-            ICourseService courseService,
-            IUserService userService) : base(mapper, userData)
+      
+
+        public RequestService( IUserData userData
+            , IServicesResourceProvider servicesResourceProvider) : base( userData, servicesResourceProvider)
 		{
-			this.requestRepository = requestRepository;
-            this.courseService = courseService;
-            this.userService = userService;
+			this.requestRepository = ServicesResourceProvider.GetEfRepositoryOfType<Request>();   
 		}
 
-        public async Task<RequestViewModel> CreateAsync(string courseId)
+        public async Task<OperationResponse> CreateAsync(int courseId)
         {
-            Request request = new Request
+            if (  await requestRepository.All().AnyAsync(r => r.CourseId == courseId && r.UserId == UserData.UserId))
             {
-               // Course = Mapper.Map<Course>(await courseService.GetAsync(courseId)),
-                CourseId = courseId,
-               // User = Mapper.Map<User>( userService.GetUserByIdAsync(UserData.UserId)),
-                UserId = UserData.UserId,
-                RequestStatus = RequestStatus.None
-            };
 
-            requestRepository.Add(request);
-            await requestRepository.SaveChangesAsync();
+                return new OperationResponse { ErrorMessage = "You are already in this course", IsSuccessful = false };
+            }
+          
+            Request request = new();
+            request.CourseId = courseId;
+            request.UserId = UserData.UserId;
+            
+            this.requestRepository.Add(request);
+            await this.requestRepository.SaveChangesAsync();
 
-            return Mapper.Map<RequestViewModel>(request);
+            return new OperationResponse { IsSuccessful = true };
         }
 
         public Task<List<Request>> GetAllAsync()

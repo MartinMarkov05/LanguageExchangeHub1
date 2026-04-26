@@ -99,7 +99,7 @@ namespace LanguageExchangeHub1.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("Identity/SignUp")]
-        public async Task<IActionResult> CreateAccount(UserRegistrationModel model, string role)
+        public async Task<IActionResult> CreateAccount(UserRegistrationModel model)
         {
             if (!this.ModelState.IsValid)
             {
@@ -126,7 +126,7 @@ namespace LanguageExchangeHub1.Controllers
             }
 
             
-            var result = await this.userService.CreateAsync(model,role);
+            var result = await this.userService.CreateAsync(model);
             
 
             if (!result.IsSuccessful)

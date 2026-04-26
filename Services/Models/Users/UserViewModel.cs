@@ -5,7 +5,7 @@ using LanguageExchangeHub1.Utilities;
 
 namespace LanguageExchangeHub1.Services.Models.Users
 {
-	public class UserViewModel : IMapFrom<User>, IMapTo<User>
+	public class UserViewModel 
     {
 		
         public string Id { get; set; }
